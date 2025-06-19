@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Identificador de Bandeira do Cartão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    input {
+      padding: 10px;
+      width: 320px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Identificar Bandeira do Cartão</h2>
+  <input type="text" id="numeroCartao" placeholder="Digite os números do cartão" maxlength="19">
+  <button onclick="identificarBandeira()">Identificar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    const inputCartao = document.getElementById("numeroCartao");
+
+    inputCartao.addEventListener("input", function () {
+      // Remove tudo que não for dígito
+      let numero = this.value.replace(/\D/g, "");
+
+      // Limita a 16 dígitos (padrão da maioria dos cartões)
+      numero = numero.substring(0, 16);
+
+      // Aplica formatação em blocos de 4
+      const formatado = numero.replace(/(.{4})/g, '$1 ').trim();
+
+      this.value = formatado;
+    });
+
+    function identificarBandeira() {
+      // Remove espaços e pega só os dígitos
+      const numero = inputCartao.value.replace(/\D/g, "");
+
+      let bandeira = "Bandeira desconhecida";
+
+      if (/^4/.test(numero)) {
+        bandeira = "Visa";
+      } else if (/^5[1-5]/.test(numero)) {
+        bandeira = "MasterCard";
+      } else if (/^3[47]/.test(numero)) {
+        bandeira = "American Express";
+      } else if (/^36/.test(numero)) {
+        bandeira = "Diners Club";
+      } else if (/^6011/.test(numero)) {
+        bandeira = "Discover";
+      } else if (/^35/.test(numero)) {
+        bandeira = "JCB";
+      }
+
+      document.getElementById("resultado").textContent = `Bandeira: ${bandeira}`;
+    }
+  </script>
+
+</body>
+</html>
