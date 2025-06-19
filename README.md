@@ -33,21 +33,14 @@ Uma aplicação simples feita em **HTML**, **CSS** e **JavaScript** que identifi
 <div style="display:flex; gap:10px;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" height="40"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard" height="40"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg" alt="Amex" height="40"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Diners_Club_Logo3.svg" alt="Diners" height="40"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Discover_Card_logo.svg" alt="Discover" height="40"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/JCB_logo.svg" alt="JCB" height="40"/>
+  <img src="https://github.com/aaronfagan/svg-credit-card-payment-icons/raw/main/flat-rounded/amex.svg" alt="Amex" height="40"/>
+  <img src="https://github.com/aaronfagan/svg-credit-card-payment-icons/raw/main/flat-rounded/diners.svg" alt="Diners" height="40"/>
+  <img src="https://github.com/aaronfagan/svg-credit-card-payment-icons/raw/main/flat-rounded/discover.svg" alt="Discover" height="40"/>
+  <img src="https://github.com/aaronfagan/svg-credit-card-payment-icons/raw/main/flat-rounded/elo.svg" alt="Discover" height="40"/>
 </div>
 
 ---
 
-## ▶️ Como Usar
-
-1. Abra o arquivo `index.html` em seu navegador
+1. Abra o arquivo *index.html* em seu navegador.
 2. Digite (ou cole) os números do cartão no campo
 3. O sistema formatará automaticamente e exibirá a **bandeira** identificada abaixo
-
----
-
-## 📁 Estrutura do Projeto
-
